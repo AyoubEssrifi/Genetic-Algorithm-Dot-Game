@@ -1,2 +1,2 @@
 # Genetic-Algorithm-Dot-Game
-Trainin dots using genetic algorithm
+Training a dot game using genetic algorithm
