@@ -18,6 +18,11 @@ class Dots(pg.sprite.Sprite):
 		self.step = step
 		self.id = id
 		self.image = pg.Surface((10,10),pg.SRCALPHA)
+		# Create an image in sprite
+		# self.image = pg.image.load('binom.jpg').convert_alpha()
+		# self.size = self.image.get_size()
+		# self.small = pg.transform.scale(self.image, (int(self.size[0]/10),int(self.size[1]/10)))
+		# self.image = self.small
 		self.rect = self.image.get_rect(center=self.pos)
 		self.image.fill(color)
 		#pg.draw.circle(self.image,(random.randrange(0,255),random.randrange(0,255),random.randrange(0,255)),(5,5),self.radius)

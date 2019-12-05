@@ -10,6 +10,7 @@ class Population():
 		self.my_dots = []
 		self.id = id
 		self.step = step
+		self.reach = 0
 		(x,y) = startpos
 		for i in range(size):
 			self.my_dots.append(dots.Dots((255,255,255),x,y,5,window,i,self.step))
@@ -24,8 +25,11 @@ class Population():
 
 	def allDotsDead(self):
 		for d in self.my_dots:
+			if d.reachedgoal:
+				self.reach += 1
 			if (not d.dead) and (not d.reachedgoal):
 				return False
+		self.reach = 0		
 		return True	
 
 	def naturalselection(self):
